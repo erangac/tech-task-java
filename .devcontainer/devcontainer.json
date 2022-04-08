@@ -1,0 +1,18 @@
+{
+    "name": "java-dev",
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "java-dev",
+    "workspaceFolder": "/src",
+    "extensions": [
+        "eamodio.gitlens",
+        "editorconfig.editorconfig",
+        "mutantdino.resourcemonitor",
+        "shd101wyy.markdown-preview-enhanced",
+        "vscjava.vscode-java-pack"
+    ],
+    "remoteUser": "dev",
+    "shutdownAction": "stopCompose"
+ }
+ 
