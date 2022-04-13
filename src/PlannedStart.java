@@ -4,26 +4,24 @@ public class PlannedStart implements IPlannedStart {
 
    @Override
    public LocalDateTime getStartTime() {
-      // TODO Auto-generated method stub
-      return LocalDateTime.MIN;
+      return startTime;
    }
 
    @Override
    public void setStartTime(LocalDateTime startTime) {
-      // TODO Auto-generated method stub
-      
+      this.startTime = startTime;
    }
 
    @Override
-   public int getCount() {
-      // TODO Auto-generated method stub
-      return 0;
+   public long getCount() {
+      return count;
    }
 
    @Override
-   public void setCount(int count) {
-      // TODO Auto-generated method stub
-      
+   public void setCount(long count) {
+      this.count = count;
    }
-   
+
+   private LocalDateTime startTime = LocalDateTime.MIN;
+   private long count = 0;
 }

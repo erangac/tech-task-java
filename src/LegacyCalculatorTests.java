@@ -30,4 +30,23 @@ public class LegacyCalculatorTests {
       Assert.assertEquals(LocalDateTime.MIN, result.getStartTime());
       Assert.assertEquals(0, result.getCount());
    }
+
+   @Test
+   public void withManyDates() {
+      // arrange
+      var calculator = new LegacyCalculator();
+      var dates = new LinkedList<LocalDateTime>();
+      dates.add(LocalDateTime.of(2018, 1, 1, 0, 0, 0));
+      dates.add(LocalDateTime.of(2018, 1, 2, 0, 0, 0));
+      dates.add(LocalDateTime.of(2018, 1, 10, 0, 0, 0));
+      dates.add(LocalDateTime.of(2018, 1, 11, 0, 0, 0));
+      dates.add(LocalDateTime.of(2018, 1, 12, 0, 0, 0));
+
+      // act
+      var result = calculator.calculate(dates);
+
+      // assert
+      Assert.assertEquals(LocalDateTime.of(2018,1,8,0,0,0), result.getStartTime());
+      Assert.assertEquals(3, result.getCount());
+   }
 }
