@@ -15,4 +15,19 @@ public class LegacyCalculatorTests {
       // assert
       Assert.assertEquals(LocalDateTime.MIN, result.getStartTime());
    }
+
+   @Test
+   public void withOneDate() {
+      // arrange
+      var calculator = new LegacyCalculator();
+      var dates = new LinkedList<LocalDateTime>();
+      dates.add(LocalDateTime.MIN);
+
+      // act
+      var result = calculator.calculate(dates);
+
+      // assert
+      Assert.assertEquals(LocalDateTime.MIN, result.getStartTime());
+      Assert.assertEquals(0, result.getCount());
+   }
 }
