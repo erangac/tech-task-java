@@ -4,7 +4,7 @@ This repository contains the instructions and the source code for the technical 
 
 ## The Task
 
-This repository contains a tiny fragment of a real-life project. We have changed a range of identifiers to protect the innocent. The code is Java and targeted for version ######.
+This repository contains a tiny fragment of a real-life project. We have changed a range of identifiers to protect the innocent. The code is Java and targeted for OpenJDK 17.0.1 or compatible.
 
 You have been asked to have a look at the code in this repository and in particular at class LegacyCalculator. Your task is to find ways to improve the code. You can spend as much time on it as you like. As a guidance, use a time box of no more than 1 hour.
 
