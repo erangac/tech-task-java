@@ -28,9 +28,9 @@ You are free to add more libraries if you think they add value. However, stay fo
 
 ## Prerequisites
 
-To work on this task you can use any IDE that supports Python. You will need Python 3.10.2 (or similar).
+To work on this task you can use any IDE that supports Java. You will need OpenJDK 17.0.1 (or compatible).
 
-On option for a free IDE is VS Code with suitable extensions for Python (most recent stable release).
+One option for a free IDE is VS Code with suitable extensions for Java (most recent stable release).
 
 ## Other Files in Repository
 
