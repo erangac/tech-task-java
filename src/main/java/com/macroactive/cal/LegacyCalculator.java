@@ -28,29 +28,25 @@ public class LegacyCalculator {
 
    // Type of 'dates' changed to interface type 'List' from impl type 'LinkedList'
    private IPlannedStart calculate(List<LocalDateTime> dates, int requiredDays) {
-      var plannedStart = new PlannedStart();
+      IPlannedStart plannedStart = new PlannedStart();
 
-      // check if dates no items then return early
       // use more readable & performant 'isEmpty'
-      if (dates == null || dates.isEmpty()) {
-         return plannedStart;
+      if (dates != null && !dates.isEmpty()) {
+
+         dates.sort(Comparator.naturalOrder());
+
+         LocalDateTime startOfFirstWeek = dates.get(0);
+         // add a week
+         LocalDateTime startOfSecondWeek = startOfFirstWeek.plusMinutes(MINUTES_PER_WEEK);
+
+         long countsForFirstWeek = getCountForWeek(dates, startOfFirstWeek);
+         long countsForSecondWeek = getCountForWeek(dates, startOfSecondWeek);
+
+         if (countsForSecondWeek > countsForFirstWeek && countsForSecondWeek >= requiredDays) {
+            plannedStart.setStartTime(startOfSecondWeek);
+            plannedStart.setCount(countsForSecondWeek);
+         }
       }
-
-      dates.sort(Comparator.naturalOrder());
-
-      var startOfFirstWeek = dates.get(0);
-      // add a week
-      var startOfSecondWeek = startOfFirstWeek.plusMinutes(MINUTES_PER_WEEK);
-
-      var countsForFirstWeek = getCountForWeek(dates, startOfFirstWeek);
-
-      var countsForSecondWeek = getCountForWeek(dates, startOfSecondWeek);
-
-      if (countsForSecondWeek > countsForFirstWeek && countsForSecondWeek >= requiredDays) {
-         plannedStart.setStartTime(startOfSecondWeek);
-         plannedStart.setCount(countsForSecondWeek);
-      }
-
       return plannedStart;
    }
 
