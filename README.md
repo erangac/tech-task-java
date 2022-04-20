@@ -10,7 +10,7 @@ You have been asked to have a look at the code in this repository and in particu
 
 To get started, create a fork of this repository in your own Github account. We can then use the fork for the technical interview. Once you have completed the task, just send us a link to your fork. Your fork needs to be a public git repository.
 
-There is no right or wrong answer. You won't find the solution for this task using Google. The key goal is to improve both the class com.macroactive.cal.LegacyCalculator and/or the tests in class LegacyCalculatorTests. Make sure that all test pass at all times.
+There is no right or wrong answer. You won't find the solution for this task using Google. The key goal is to improve both the class com.macroactive.cal.LegacyCalculator and/or the tests in class com.macroactive.cal.LegacyCalculatorTests. Make sure that all test pass at all times.
 
 In the technical interview we will discuss the improvements that you have identified and implemented. We will also discuss alternative and additional options you may have considered while working on this task.
 

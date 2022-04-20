@@ -1,4 +1,5 @@
-import com.macroactive.cal.LegacyCalculator;
+package com.macroactive.cal;
+
 import org.junit.Assert;
 import org.junit.Test;
 
